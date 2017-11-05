@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Assignment2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Denham and Sabelo, Assignment 2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Search Engine
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="paper.html">Write up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	 <div class="container">
+		 <div class="row justify-content-center" style="margin-top:100px;">
+			 <img src="img/head.png"onmouseover="hoverHead(this);" onmouseout="unhoverHead(this);" onclick="setbodyPart('head')" />
+		 </div>
+		 <div class="row justify-content-center">
+			 <img src="img/chest.png" onmouseover="hoverChest(this); " onmouseout="unhoverChest(this); " onclick="setbodyPart('chest')" />
+		 </div>
+		 <div class="row justify-content-center">
+			 <img src="img/stomach.png"onmouseover="hoverStomach(this);" onmouseout="unhoverStomach(this);" onclick="setbodyPart('stomach')" />
+		 </div>
+		 <div class="row justify-content-center">
+			 <img src="img/legs.png"onmouseover="hoverLegs(this);" onmouseout="unhoverLegs(this);" onclick="setbodyPart('leg')"/>
+		 </div>
+		 
+		 				 
+	  <div class="row justify-content-center">
+		  <div class="col-md-6">
+			  <div class="form-group" >
+				    <label for="usr">Body Part</label>
+  					<input type="text" class="form-control" id="bodyPart" placeholder="select the part on the body">
+				  <select class="form-control" id="querySelectorPain" name="querySelectorPain" onchange="getResponses()">
+					<option value="" disabled selected>Severity Of Pain</option>
+					<option value='mild'>mild</option>
+					<option value="moderate">moderate</option>
+					<option value="severe">severe</option>
+					<option value="extreme">extreme</option>
+				  </select>
+<!--
+				  <label for="sel1">Query Search String</label>
+				  <select class="form-control" id="querySelector" name="querySelector" onchange="getResponses(this.value)" >
+					<option value="" disabled selected>Select your query</option>
+					<option value='dry cough~10'>dry cough</option>
+					<option value="pain in chest~10">pain in chest</option>
+					<option value="swollen feet~10">swollen feet</option>
+					<option value="night sweats">night sweats</option>
+					<option value="severe pain">severe pain</option>
+				  </select>
+-->
+			</div>			  
+		  </div>
+		</div>
+		 <div class="row justify-content-center">
+			 <p id="results">...</p>
+		 </div>
+	  </div>
+    <!-- Page Content -->
+	  <script>
+		  function hoverHead(element) {
+    element.setAttribute('src', 'img/head2.png');
+}
+function unhoverHead(element) {
+    element.setAttribute('src', 'img/head.png');
+}
+		  function hoverChest(element) {
+    element.setAttribute('src', 'img/chest2.png');
+}
+function unhoverChest(element) {
+    element.setAttribute('src', 'img/chest.png');
+}
+		  		  function hoverStomach(element) {
+    element.setAttribute('src', 'img/stomach2.png');
+}
+function unhoverStomach(element) {
+    element.setAttribute('src', 'img/stomach.png');
+}
+		  		  function hoverLegs(element) {
+    element.setAttribute('src', 'img/legs2.png');
+}
+function unhoverLegs(element) {
+    element.setAttribute('src', 'img/legs.png');
+}
+		  
+		  function setbodyPart(bodypart){
+			  console.log(bodypart);
+			  document.getElementById("bodyPart").value = bodypart;
+		  }
+	  </script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.js"></script>
+	  <script src="js/popper.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+	  <script src="js/responseFile.js"></script>
+	  <script src="js/solrServerCall2.js"></script>
+	  
+
+  </body>
+
+</html>

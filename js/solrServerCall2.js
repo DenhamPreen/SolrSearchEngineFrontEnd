@@ -3,7 +3,11 @@ var config = {
 	port: '8983'
 }
 
-function getResponses(query) {
+function getResponses() {
+	var query = document.getElementById("querySelectorPain").value + ' ' + document.getElementById("bodyPart").value;
+	
+	console.log(query);
+
 	//example query: directed_by:'Gary Lennon', q=id:"USD"
   var xhttp = new XMLHttpRequest();
   console.log(query);
