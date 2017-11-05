@@ -49,17 +49,17 @@
 				  <label for="sel1">Query Search String</label>
 				  <select class="form-control" id="querySelector" name="querySelector" onchange="getResponses(this.value)" >
 					<option value="" disabled selected>Select your query</option>
-					<option value='dry cough~10'>query 1</option>
-					<option value="pain in chest~10">query 2</option>
-					<option value="swollen feet~10">query 3</option>
-					<option value="night sweats">query 4</option>
-					<option value="*:*">query 5</option>
+					<option value='dry cough~10'>dry cough</option>
+					<option value="pain in chest~10">pain in chest</option>
+					<option value="swollen feet~10">swollen feet</option>
+					<option value="night sweats">night sweats</option>
+					<option value="severe pain">severe pain</option>
 				  </select>
 			</div>			  
 		  </div>
 		</div>
 		 <div class="row justify-content-center">
-			 <p id="results">Answer goes here</p>
+			 <p id="results">...</p>
 		 </div>
 	  </div>
     <!-- Page Content -->
@@ -68,6 +68,7 @@
     <script src="js/jquery.js"></script>
 	  <script src="js/popper.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+	  <script src="js/responseFile.js"></script>
 	  <script src="js/solrServerCall.js"></script>
 	  
 
