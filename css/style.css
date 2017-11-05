@@ -1,0 +1,8 @@
+body {
+  background: #eeff89 no-repeat center center fixed;
+/*	url('http://placehold.it/1920x1080')*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
