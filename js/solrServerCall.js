@@ -1,5 +1,5 @@
 var config = {
-	core: 'testRecords',	
+	core: 'medicalData',	
 	port: '8983'
 }
 
