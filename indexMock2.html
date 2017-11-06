@@ -62,16 +62,17 @@
 			  <div class="form-group" >
 				    <label for="usr">Body Part</label>
   					<input type="text" class="form-control" id="bodyPart" placeholder="select the part on the body">
-				  <select class="form-control" id="querySelectorPain" name="querySelectorPain" onchange="getResponses()">
+				    <select class="form-control" id="querySelectorPain" name="querySelectorPain">
 					<option value="" disabled selected>Severity Of Pain</option>
 					<option value='mild'>mild</option>
 					<option value="moderate">moderate</option>
 					<option value="severe">severe</option>
 					<option value="extreme">extreme</option>
 				  </select>
-<!--
-				  <label for="sel1">Query Search String</label>
-				  <select class="form-control" id="querySelector" name="querySelector" onchange="getResponses(this.value)" >
+              </div>      
+              <div class="form-group" >       
+         <label for="sel1">Query Search String</label>
+				  <select class="form-control" id="querySelector" name="querySelector" onchange="getResponses()" >
 					<option value="" disabled selected>Select your query</option>
 					<option value='dry cough~10'>dry cough</option>
 					<option value="pain in chest~10">pain in chest</option>
@@ -79,7 +80,6 @@
 					<option value="night sweats">night sweats</option>
 					<option value="severe pain">severe pain</option>
 				  </select>
--->
 			</div>			  
 		  </div>
 		</div>

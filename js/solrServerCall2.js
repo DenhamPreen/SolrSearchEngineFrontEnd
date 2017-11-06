@@ -7,11 +7,14 @@ function getResponses() {
 	var query = document.getElementById("querySelectorPain").value + ' ' + document.getElementById("bodyPart").value;
 	
 	console.log(query);
-
+    
+    var query2 = document.getElementById("querySelector").value
+    
 	//example query: directed_by:'Gary Lennon', q=id:"USD"
   var xhttp = new XMLHttpRequest();
   console.log(query);
-  var url = 'http://ae2caf79.ngrok.io'+'/solr/'+ config.core +'/browse?q='+query+'&wt=xml';
+  var url = 'http://ae2caf79.ngrok.io'+'/solr/'+ config.core +'/browse?q='+query+"&rq={!rerank reRankQuery=$rqq reRankDocs=30 reRankWeight=3}&rqq=("+query2+")"+'&wt=xml';
+    
 	//var url = 'http://localhost:8983/solr/testCore/select?q=id:"USD"';
 	//var urlTest = 'http://1a9d5d38.ngrok.io/solr/medicalData/browse?&q=night+sweats&wt=xml';
   xhttp.onreadystatechange = function() {

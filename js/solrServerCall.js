@@ -10,7 +10,7 @@ function getResponses(query) {
   var url = 'http://ae2caf79.ngrok.io'+'/solr/'+ config.core +'/browse?q='+query+'&wt=xml';
 	//var url = 'http://localhost:8983/solr/testCore/select?q=id:"USD"';
 	//var urlTest = 'http://1a9d5d38.ngrok.io/solr/medicalData/browse?&q=night+sweats&wt=xml';
-  xhttp.onreadystatechange = function() {
+   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 		document.getElementById("results").innerHTML = "";
 		
